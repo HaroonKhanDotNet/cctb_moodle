@@ -9,7 +9,7 @@ def is_palindrome(p_str=''):
     This is the unit under development to be tested
     '''
 
-    if not isinstance(p_str, str):
+    if not isinstance(p_str, str)
         return None
 
     if len(p_str) == 0:
