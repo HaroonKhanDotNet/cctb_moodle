@@ -21,3 +21,6 @@ def fizzbuzz(num=None):
         return 'buzz'
 
     return num
+
+
+fizzbuzz(12, 34, 45, 60, 90)
