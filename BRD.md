@@ -31,8 +31,16 @@ Hivenue need to integrate ***Development Environment*** with a ***CI/CD Pipeline
 5. **Push Notifications** (At each step)
 
 ```mermaid
-flowchart TD
-    Start --> Stop
+Hivenue CI/CD Pipeline
+  graph LR;
+      A [Hivenue <br> Dev Env.] --Code Commit--> B [GitHub/Riipen (Branch)];
+      B --Code Build--> C [Unit/Integration Testing (Whitebox)];
+      C --Fail--> D [Build Fail (Push Notification)];
+      C --Pass--> E [Build Pass (Push Notification)];
+      E --Staging/Delivery--> F [End-to-End Testing/UAT (Blackbox)];
+      F --Fail--> G [Delivery Fail (Push Notification)];
+      F --Pass--> H [Delivery Pass (Push Notification)];
+      H --Awaiting Approval/Deploy--> I [Production Release]
 ```
 
 ### Deliverables
