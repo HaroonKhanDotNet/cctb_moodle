@@ -33,14 +33,14 @@ Hivenue need to integrate ***Development Environment*** with a ***CI/CD Pipeline
 ### Hivenue CI/CD Pipeline
 ```mermaid
   flowchart TD;
-      A[Hivenue <br> Dev Env.] --Code Commit--> B[GitHub Riipen Branch];
-      B --Code Build--> C{Unit Integration Testing Whitebox};
-      C --Fail--> D[Build Fail Push Notification];
-      C --Pass--> E[Build Pass Push Notification];
-      E --Staging/Delivery--> F{End-to-End Testing UAT Blackbox};
-      F --Fail--> G[Delivery Fail Push Notification];
-      F --Pass--> H[Delivery Pass Push Notification];
-      H --Awaiting Approval/Deploy--> I[Production Release];
+      A[Hivenue <br> Dev. Environment] --Code <br> Commit--> B[GitHub <br> Riipen Branch];
+      B --Code <br> Build--> C{Unit/Integration <br> Whitebox Testing};
+      C --Fail--> D[Build Fail <br> Push Notification];
+      C --Pass--> E[Build Pass <br> Push Notification];
+      E --Staging/ <br> Delivery--> F{End-to-End/UAT <br> Blackbox Testing};
+      F --Fail--> G[Delivery Fail <br> Push Notification];
+      F --Pass--> H[Delivery Pass <br> Push Notification];
+      H --Awaiting <br> Approval/Deploy--> I[Production <br> Release];
 ```
 
 ### Deliverables
