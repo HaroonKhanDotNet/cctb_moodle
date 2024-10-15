@@ -33,7 +33,7 @@ Hivenue need to integrate ***Development Environment*** with a ***CI/CD Pipeline
 ### Hivenue CI/CD Pipeline
 ```mermaid
   flowchart TD;
-      A[Hivenue <br> Dev. Environment] -- Code <br> Commit --> B [Riipen <br> Branch];
+      A[Hivenue <br> Dev. Environment] -- Code <br> Commit --> B[Riipen <br> Branch];
       B -- Code <br> Build --> C{Unit/Integration <br> Whitebox Testing};
       C -- Fail --> D[Build Fail <br> Push Notification];
       C -- Pass --> E[Build Pass <br> Push Notification];
