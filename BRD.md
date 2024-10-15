@@ -27,20 +27,20 @@ Hivenue need to integrate ***Development Environment*** with a ***CI/CD Pipeline
 1. **Build** (Packaging with Dependencies)
 2. **Unit/Integration Testing** (Whitebox Testing)
 3. **Staging** (Continues Delivery - Package/Image)
-4. **End-to-End Testing** (Blackbox Testing/UAT)
+4. **End-to-End Testing** (Blackbox Testing)
 5. **Push Notifications** (At each step)
 
 ### Hivenue CI/CD Pipeline
 ```mermaid
   flowchart TD;
-      A[Hivenue <br> Dev. Environment] -- Code <br> Commit --> B[Riipen <br> Branch];
+      A[Hivenue <br> Development <br> Environment] -- Code <br> Commit --> B[Riipen <br> Branch];
       B -- Code <br> Build --> C{Unit & Integration <br> Whitebox Testing};
       C -- Fail --> D[Build Fail <br> Push Notification];
       C -- Pass --> E[Build Pass <br> Push Notification];
-      E -- Delivery <br> Staging --> F{End-to-End/UAT <br> Blackbox Testing};
+      E -- Delivery <br> Staging --> F{End-to-End <br> Blackbox Testing};
       F -- Fail --> G[Delivery Fail <br> Push Notification];
       F -- Pass --> H{Delivery Pass <br> Push Notification};
-      H -- Continuous <br> Deployment --> I[Deploy <br> Production <br> Release];
+      H -- Continuous <br> Deployment --> I[Production <br> Release];
       H -- Approve <br> Deployment --> I;
 ```
 
