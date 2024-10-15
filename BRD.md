@@ -30,8 +30,8 @@ Hivenue need to integrate ***Development Environment*** with a ***CI/CD Pipeline
 4. **End-to-End Testing** (Blackbox Testing/UAT)
 5. **Push Notifications** (At each step)
 
+### Hivenue CI/CD Pipeline
 ```mermaid
-Hivenue CI/CD Pipeline
   graph LR;
       A [Hivenue <br> Dev Env.] --Code Commit--> B [GitHub/Riipen (Branch)];
       B --Code Build--> C [Unit/Integration Testing (Whitebox)];
