@@ -9,4 +9,6 @@ jobs:
 
     steps:
       - shell: python
-        run: print('hello from python shell inside github runner')
+        run: |
+          print('hello from python shell inside github runner')
+          print( ${{ vars.NODE_VERSION }} )
